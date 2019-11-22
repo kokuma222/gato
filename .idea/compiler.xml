@@ -7,14 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="test" />
+        <module name="higgs" />
+        <module name="fragile" />
         <module name="sam" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="fragile" target="1.7" />
-      <module name="higgs" target="1.7" />
-      <module name="mvcdemo" target="1.7" />
-      <module name="mybatis" target="1.5" />
+      <module name="fragile" target="8" />
+      <module name="higgs" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

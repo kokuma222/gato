@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 引入外部配置文件 -->
+    <properties resource="higgs.properties"></properties>
+
+    <!-- 为 pojo 起别名 -->
+    <typeAliases>
+        <!-- 1. 一个一个配置 type 类的全限定路径名, alias 类别名 -->
+        <!--<typeAlias type="com.zzz.entity.User" alias="User"/>-->
+        <!-- 2. 自动扫描, 将 JAVA 类的类名作为类的别名 -->
+        <package  name="com.zzz.entity"/>
+    </typeAliases>
+
+    <!-- 配置 mybatis 运行环境 -->
+    <environments default="cybatis">
+        <environment id="cybatis">
+            <!-- type="JDBC" 代表使用 JDBC 的提交和回滚来管理事务 -->
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <!-- 1. 一个一个配置映射文件 -->
+        <!--<mapper resource="mappings/UserDao.xml"/>-->
+        <!-- 2. 自动扫描包内的 Mapper 接口与配置文件 -->
+        <package name="com/zzz/dao"/>
+    </mappers>
+</configuration>

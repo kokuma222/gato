@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zzz.dao.UserDao">
     <resultMap id="userDao" type="User">
-        <id property="no" column="no" javaType="java.lang.String"></id>
-        <result property="name" column="name" javaType="java.lang.String"></result>
-        <result property="password" column="password" javaType="java.lang.String"></result>
+        <id property="nO" column="no" javaType="java.lang.String"></id>
+        <result property="nAme" column="name" javaType="java.lang.String"></result>
+        <result property="pAssword" column="password" javaType="java.lang.String"></result>
     </resultMap>
 
-    <insert id="insertUser">
-        insert into user (no, name, password) values (#{no}, #{name}, #{password})
+    <insert id="insertUser" parameterType="User">
+        insert into user(no, name, password) values(#{nO}, #{nAme}, #{pAssword})
     </insert>
 
     <select id="selectUserByNo" parameterType="String" resultMap="userDao">

@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="test" />
-        <module name="higgs" />
         <module name="fragile" />
+        <module name="higgs" />
+        <module name="test" />
         <module name="sam" />
       </profile>
     </annotationProcessing>

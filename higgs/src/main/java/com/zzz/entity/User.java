@@ -1,31 +1,31 @@
 package com.zzz.entity;
 
 public class User {
-    private String no;
-    private String name;
-    private String password;
+    private String nO;
+    private String nAme;
+    private String pAssword;
 
-    public String getNo() {
-        return no;
+    public String getnO() {
+        return nO;
     }
 
-    public String getName() {
-        return name;
+    public String getnAme() {
+        return nAme;
     }
 
-    public String getPassword() {
-        return password;
+    public String getpAssword() {
+        return pAssword;
     }
 
-    public void setNo(String no) {
-        this.no = no;
+    public void setnO(String nO) {
+        this.nO = nO;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setnAme(String nAme) {
+        this.nAme = nAme;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setpAssword(String pAssword) {
+        this.pAssword = pAssword;
     }
 }
